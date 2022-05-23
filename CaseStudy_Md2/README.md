@@ -1,3 +1,4 @@
+# CaseStudy_Md2
 #Book Shop Manager
 # Các kiến thức áp dụng
 * Vòng lặp,mảng,phương thức trong java
