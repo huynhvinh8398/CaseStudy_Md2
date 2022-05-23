@@ -9,7 +9,7 @@ public class Order {
     private String fullname;
     private String phone;
     private String address;
-    private Double grandTotal;
+    private Double total;
     private Instant crearedAt;
 //khởi tạo 1 List order
  List<OrderItem> orderItems = new ArrayList<>();
@@ -67,12 +67,12 @@ public class Order {
         this.address = address;
     }
 
-    public Double getGrandTotal() {
-        return grandTotal;
+    public Double geTotal() {
+        return total;
     }
 
-    public void setGrandTotal(Double grandTotal) {
-        this.grandTotal = grandTotal;
+    public void setTotal(Double Total) {
+        this.total = total;
     }
 
     public Instant getCrearedAt() {

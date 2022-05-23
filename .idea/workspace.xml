@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e3fc24a-62de-4ba5-b618-d63152364833" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/CaseStudy_Md2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudy_Md2/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/order_item.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/order_item.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/orders.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/orders.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/products.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/products.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/users.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/OderView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/OderView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +34,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/CaseStudy_Md2" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -221,6 +230,7 @@
       <workItem from="1653238108047" duration="407000" />
       <workItem from="1653268239403" duration="7879000" />
       <workItem from="1653309722500" duration="2935000" />
+      <workItem from="1653312708256" duration="14145000" />
     </task>
     <servers />
   </component>

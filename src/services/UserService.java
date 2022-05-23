@@ -60,12 +60,13 @@ public class UserService implements IUserService{
             String phone = newUser.getPhone();
             if (phone != null && !phone.isEmpty())
                 user.setPhone(newUser.getPhone());
-            String address = user.getAddress();
-            if (address != null && !address.isEmpty())
-                user.setAddress(newUser.getAddress());
-            String email = user.getEmail();
+            String email = newUser.getEmail();
             if (email !=null && !email.isEmpty())
                 user.setEmail(newUser.getEmail());
+            String address = newUser.getAddress();
+            if (address != null && !address.isEmpty())
+                user.setAddress(newUser.getAddress());
+
             user.setUpdatedAt(Instant.now());
             CSVUtils.write(PATH, users);
             break;

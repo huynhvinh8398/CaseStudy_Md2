@@ -7,6 +7,7 @@ import services.*;
 import utils.AppUtils;
 import utils.ValidateUtils;
 
+import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Scanner;
 
@@ -15,8 +16,10 @@ public class OderView {
         private final IProductService productService;
         private final IOrderService orderService;
         private final IOderItemsService oderItemsService;
+    DecimalFormat format = new DecimalFormat("###,###,###" + " vnđ");
 
-        public OderView(){
+
+    public OderView(){
             productService = ProductService.getInstance();
             orderService = OrderService.getInstance();
             oderItemsService = OrderItemService.getInstance();
@@ -34,33 +37,30 @@ public class OderView {
             oderItemsService.findAll();
             ProductView productView = new ProductView();
             productView.showProducts(InputOption.ADD);
-
             long id = System.currentTimeMillis()/1000;
         System.out.println("Nhập id sách: ");
         System.out.print(" ➤ ");
-        int bookId = scanner.nextInt();
-        scanner.nextLine();
+        int bookId = Integer.parseInt(scanner.nextLine());
         while (!productService.existById(bookId)){
             System.out.println("Id sách này không tồn tại");
             System.out.println("Nhập id sách: ");
             System.out.print(" ➤ ");
-            bookId = scanner.nextInt();
+            bookId = Integer.parseInt(scanner.nextLine());
         }
         Product product = productService.findById(bookId);
         double price = product.getPrice();
         int oldQuantity = product.getQuantity();
         System.out.println("Nhập số lượng: ");
         System.out.print(" ➤ ");
-        int quantity = scanner.nextInt();
-        scanner.nextLine();
+        int quantity = Integer.parseInt(scanner.nextLine());
         while (!checkQuantityBook(product, quantity)){
             System.out.println("Vượt quá số lượng! Vui lòng nhập lại");
             System.out.println("Nhập số lượng");
             System.out.print(" ➤ ");
-            quantity = scanner.nextInt();
+            quantity = Integer.parseInt(scanner.nextLine());
         }
         String bookName = product.getName();
-        double total = quantity*price;
+        double total = quantity * price;
         int currentQuantity = oldQuantity - quantity;
         product.setQuantity(currentQuantity);
         //productService.update(new Product());
@@ -103,18 +103,20 @@ public class OderView {
                 Order order = new Order(orderId, name, phone, address);
                 oderItemsService.add(orderItem);
                 orderService.add(order);
+
+
                 System.out.println("Tạo đơn hàng thành công");
                 do {
-                    System.out.println("㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡");
-                    System.out.println("㋡                                         ㋡");
-                    System.out.println("㋡     1.Tạo tiếp đơn hàng                ㋡");
-                    System.out.println("㋡     2.Trở lại                           ㋡");
-                    System.out.println("㋡     3.In hoá đơn                        ㋡");
-                    System.out.println("㋡     4.Thoát                             ㋡");
-                    System.out.println("㋡                                         ㋡");
-                    System.out.println("㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡");
+                    System.out.println("**************************************");
+                    System.out.println("*                                    *");
+                    System.out.println("*     1.Tạo tiếp đơn hàng            *");
+                    System.out.println("*     2.Trở lại                      *");
+                    System.out.println("*     3.In hoá đơn                   *");
+                    System.out.println("*     4.Thoát                        *");
+                    System.out.println("*                                    *");
+                    System.out.println("**************************************");
                     System.out.print(" ⭆ ");
-                    Integer choice = Integer.parseInt(scanner.nextLine());
+                    int choice = Integer.parseInt(scanner.nextLine());
                     switch (choice) {
                         case 1:
                             addOrder();
@@ -139,13 +141,20 @@ public class OderView {
 
     public void showPaymentInfo(OrderItem orderItem, Order order) {
         try {
-            System.out.println("----------------------------------------------------------HOÁ ĐƠN----------------------------------------------------------------");
-            System.out.printf("|%-15s %-20s %-15s %-15s %-15s %-15s %-15s\n|", "   Id", "Tên khách hàng", "   SĐT", "Địa chỉ", "Tên sách", "Số lượng", "Giá");
-            System.out.printf("%-15d %-20s %-15s %-15s %-15s %-15d %-15f \n|", order.getId(), order.getFullName(), order.getPhone(),
-                    order.getAddress(), orderItem.getProductName(), orderItem.getQuantity() ,AppUtils.doubleToVND(orderItem.getPrice()));
-            System.out.println(" -------------------------------------------------- Tổng tiền:" + AppUtils.doubleToVND(orderItem.getQuantity()*orderItem.getPrice()));
-            System.out.println("---------------------------------------------VINH HUYNH BOOK SHOP-----------------------------------------------------------------");
-            boolean is = true;
+            System.out.println("-------------------------------------------------------------" +
+                    "HOÁ ĐƠN--------------------------------------------------------------------");
+            System.out.printf("|%-11s %-11s %-12s %-20s %-14s %-10s %-16s %-35s\n|",
+                    "Id", "Tên khách hàng", "SĐT", "Địa chỉ", "Tên sách ", "Số lượng", "giá", "Tổng");
+            System.out.printf("|%-11s %-11s %-12s %-20s %-14s %-10s %-16s %-35s\n|", order.getId(), order.getFullName(),
+                    order.getPhone(), order.getAddress(),orderItem.getProductName(), orderItem.getQuantity(),format.format(orderItem.getPrice()), format.format(orderItem.getQuantity()*orderItem.getPrice()));
+            System.out.println("---------------------------------------------------------------------------------------------------------------------------------------");
+//            System.out.println("----------------------------------------------------------HOÁ ĐƠN----------------------------------------------------------------");
+//            System.out.printf("|%-15s %-20s %-15s %-15s %-15s %-15s %-15s\n|", "   Id", "Tên khách hàng", "   SĐT", "Địa chỉ", "Tên sách", "Số lượng", "Giá");
+//            System.out.printf("%-15d %-20s %-15s %-15s %-15s %-15d %-15f \n|", order.getId(), order.getFullName(), order.getPhone(),
+//                    order.getAddress(), orderItem.getProductName(), orderItem.getQuantity() , format.format(orderItem.getPrice()));
+//            System.out.println(" -------------------------------------------------- Tổng tiền:" + AppUtils.doubleToVND(orderItem.getQuantity()*orderItem.getPrice()));
+//            System.out.println("---------------------------------------------VINH HUYNH BOOK SHOP-----------------------------------------------------------------");
+            boolean flag = true;
             do {
                 System.out.println("Nhấn 'q' để trở lại \t|\t 't' để thoát chương trình");
                 System.out.println("Nhấn ");
@@ -160,9 +169,9 @@ public class OderView {
                         break;
                     default:
                         System.out.println("Nhấn không đúng! vui lòng chọn lại");
-                        is = false;
+                        flag = false;
                 }
-            } while (!is);
+            } while (!flag);
         } catch (Exception e) {
             e.getStackTrace();
         }
@@ -174,8 +183,7 @@ public class OderView {
         OrderItem newOrderItem = new OrderItem();
         try {
             System.out.println("----------------------------------------------------------LIST ORDER--------------------------------------------------------------------------------");
-            System.out.println("|                                                                                                                                                    |");
-            System.out.printf("|%-15s %-20s %-12s %-23s %-11s %-11s %-15s %-21s\n|", "   Id", "Tên khách hàng", "  SĐT", "Địa chỉ", "Tên sách", "Số lượng", "   Giá", "   Tổng" + "                ");
+            System.out.printf("|%-12s %-12s %-12s %-25s %-15s %-8s %-15s %-15s\n|", "   Id", "Tên khách hàng", "  SĐT", "Địa chỉ", "Tên sách", "Số lượng", "   Giá", "   Tổng" + "                ");
             for (Order order : orders) {
                 for (OrderItem orderItem : orderItems) {
                     if (orderItem.getOrderId() == order.getId()) {
@@ -183,18 +191,17 @@ public class OderView {
                         break;
                     }
                 }
-                System.out.printf("%-15d %-20s %-12s %-10s %-10s %-10d %-15f %-20f %-7s\n|",
+                System.out.printf("|%-12s %-12s %-12s %-25s %-15s %-8s %-15s %-15s\n|",
                         order.getId(),
                         order.getFullName(),
                         order.getPhone(),
                         order.getAddress(),
                         newOrderItem.getProductName(),
                         newOrderItem.getQuantity(),
-                        newOrderItem.getPrice(),
-                        newOrderItem.getPrice() * newOrderItem.getQuantity(),
+                      format.format(newOrderItem.getPrice())  ,
+                    format.format(newOrderItem.getPrice() * newOrderItem.getQuantity())    ,
                         "|");
             }
-            System.out.println("                                                                                                                                                     |");
             System.out.println("---------------------------------------------------------VINH HUYNH BOOK SHOP-------------------------------------------------------------------------");
             boolean is = true;
             do {

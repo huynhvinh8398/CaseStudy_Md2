@@ -250,8 +250,8 @@ public class UserView {
                 System.out.println("┌ - - - - - SỬA - - - - - ┐");
                 System.out.println("︲  1. Đổi tên            ︲");
                 System.out.println("︲  2. Sửa số điện thoại  ︲");
-                System.out.println("︲  3. Sửa địa chỉ        ︲");
-                System.out.println("︲  4. sửa email          ︲");
+                System.out.println("︲  3. Sửa email        ︲");
+                System.out.println("︲  4. sửa địa chỉ        ︲");
                 System.out.println("︲  5. Quay lại           ︲");
 
                 System.out.println("└ - - - - - - - - - - - - ┘");
@@ -273,16 +273,17 @@ public class UserView {
                         System.out.println("Bạn đã đổi số điện thoại thành công");
                         break;
                     case 3:
+                        String email = inputEmail();
+                        newUser.setEmail(email);
+                        userService.update(newUser);
+                        System.out.println("Bạn đã đổi email thành công");
+                        break;
+                    case 4:
                         String address = inputAddress(InputOption.UPDATE);
                         newUser.setAddress(address);
                         userService.update(newUser);
                         System.out.println("Bạn đã đổi địa chỉ thành công");
                         break;
-                    case 4:
-                        String email = inputEmail();
-                        newUser.setEmail(email);
-                        userService.update(newUser);
-                        System.out.println("Bạn đã đổi email thành công");
                 }
                 isRetry = option != 5 && AppUtils.isRetry(InputOption.UPDATE);
 
