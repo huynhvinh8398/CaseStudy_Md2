@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e3fc24a-62de-4ba5-b618-d63152364833" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/order_item.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/order_item.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/orders.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/orders.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/products.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/products.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/users.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/OderView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/OderView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/UserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/ProductView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ProductView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +98,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../idmdowload/Market_Techs-Case_2/Market_Techs-Case" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../idmdowload/CaseStudy_Md2-main/CaseStudy_Md2-main" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -231,6 +227,7 @@
       <workItem from="1653268239403" duration="7879000" />
       <workItem from="1653309722500" duration="2935000" />
       <workItem from="1653312708256" duration="14145000" />
+      <workItem from="1653354605441" duration="9849000" />
     </task>
     <servers />
   </component>

@@ -87,7 +87,7 @@ public class ProductView {
         do {
             price = AppUtils.retryParseDouble();
             if (price <=0)
-                System.out.println("Giá sách phải lớn 0");
+                System.out.println("Giá sách phải lớn hơn 0");
 
             }while (price<=0);
             return price;
@@ -107,7 +107,7 @@ public class ProductView {
         do {
             quantity = AppUtils.rentryParseInt();
             if (quantity <=0)
-                System.out.println("Số lượng phải lớn 0");
+                System.out.println("Số lượng phải lớn hơn 0");
         }while (quantity<=0);
         return quantity;
     }

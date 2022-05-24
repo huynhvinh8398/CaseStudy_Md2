@@ -183,7 +183,7 @@ public class OderView {
         OrderItem newOrderItem = new OrderItem();
         try {
             System.out.println("----------------------------------------------------------LIST ORDER--------------------------------------------------------------------------------");
-            System.out.printf("|%-12s %-12s %-12s %-25s %-15s %-8s %-15s %-15s\n|", "   Id", "Tên khách hàng", "  SĐT", "Địa chỉ", "Tên sách", "Số lượng", "   Giá", "   Tổng" + "                ");
+            System.out.printf("|%-12s %-12s %-12s %-25s %-30s %-25s %-15s %-15s\n|", "   Id", "Tên khách hàng", "  SĐT", "Địa chỉ", "Tên sách", "Số lượng", "   Giá", "   Tổng" + "                ");
             for (Order order : orders) {
                 for (OrderItem orderItem : orderItems) {
                     if (orderItem.getOrderId() == order.getId()) {
@@ -191,7 +191,7 @@ public class OderView {
                         break;
                     }
                 }
-                System.out.printf("|%-12s %-12s %-12s %-25s %-15s %-8s %-15s %-15s\n|",
+                System.out.printf("|%-12s %-12s %-12s %-25s %-30s %-25s %-15s %-15s\n|",
                         order.getId(),
                         order.getFullName(),
                         order.getPhone(),

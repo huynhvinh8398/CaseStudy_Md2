@@ -52,38 +52,6 @@ public class ProductService implements IProductService {
         return null;
     }
 
-//    @Override
-//    public void update(Product newProduct) {
-//        List<Product> products = findAll();
-//        for (Product product : products) {
-//            if (product.getId() == newProduct.getId()) {
-//                String name = newProduct.getName();
-//                if (name != null && !name.isEmpty())
-//                    product.setName(newProduct.getName());
-//
-//                Integer quantity = product.getQuantity();
-////                if (quantity >0){
-////                    product.setQuantity(product.getQuantity());
-//                if (quantity != null) {
-//                    product.setQuantity(quantity);
-//
-//                }
-//                CSVUtils.write(PATH, products);
-//                Double price = newProduct.getPrice();
-//                if (price != null) {
-//                    product.setPrice(price);
-//                }
-//
-//                String description = newProduct.getDescription();
-//                if (description != null && !description.isEmpty())
-//                    product.setDescription(description);
-//
-//                product.setUpdateAt(Instant.now());
-//                CSVUtils.write(PATH, products);
-//                break;
-//            }
-//        }
-//    }
 
     @Override
     public Product findById(long id) {
@@ -159,6 +127,38 @@ public class ProductService implements IProductService {
 
 
 
+//    @Override
+//    public void update(Product newProduct) {
+//        List<Product> products = findAll();
+//        for (Product product : products) {
+//            if (product.getId() == newProduct.getId()) {
+//                String name = newProduct.getName();
+//                if (name != null && !name.isEmpty())
+//                    product.setName(name);
+//
+//                Integer quantity = newProduct.getQuantity();
+////                if (quantity !=null){
+////                    product.setQuantity(product.getQuantity());
+//                if (quantity != null) {
+//                    product.setQuantity(quantity);
+//
+//                }
+//                CSVUtils.write(PATH, products);
+//                Double price = newProduct.getPrice();
+//                if (price != null) {
+//                    product.setPrice(price);
+//                }
+//
+//                String description = newProduct.getDescription();
+//                if (description != null && !description.isEmpty())
+//                    product.setDescription(description);
+//
+//                product.setUpdateAt(Instant.now());
+//                CSVUtils.write(PATH, products);
+//                break;
+//            }
+//        }
+//    }
 
     @Override
     public void updateName(Product newProduct) {
