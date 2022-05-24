@@ -171,21 +171,21 @@ productService.add(product);
                case 1:
                    String name = inputName(InputOption.UPDATE);
                    newProduct.setName(name);
-                   productService.updateName(newProduct);
+                   productService.update(newProduct);
                    System.out.println("Tên sách đã cập nhật thành công");
                    showProducts(InputOption.UPDATE);
                    break;
                case 2:
                    Integer quantity = inputQuantity(InputOption.UPDATE);
                    newProduct.setQuantity(quantity);
-                   productService.updateQuantity(newProduct);
+                   productService.update(newProduct);
                    System.out.println("Số lượng sách đã cập nhật thành công");
                    showProducts(InputOption.UPDATE);
                    break;
                case 3:
                    double price = inputPrice(InputOption.UPDATE);
                    newProduct.setPrice(price);
-                   productService.updatePrice(newProduct);
+                   productService.update(newProduct);
                    System.out.println("Giá sách đã cập nhật thành công");
                    showProducts(InputOption.UPDATE);
 

@@ -65,7 +65,9 @@ public class OderView {
         product.setQuantity(currentQuantity);
         //productService.update(new Product());
         OrderItem orderItem = new OrderItem(id,price,quantity,orderId,bookId,bookName,total);
+        productService.updateQuantity(bookId, quantity);
         return orderItem;
+
     }
     // thêm người dùng order
     public void addOrder(){
