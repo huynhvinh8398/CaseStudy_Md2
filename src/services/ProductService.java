@@ -193,14 +193,16 @@ public class ProductService implements IProductService {
     @Override
     public void updateQuantity(long id, int quantity) {
         List<Product> products = findAll();
-        for (Product product : products){
-            if (product.getId()== id)
-                if (product.getQuantity()>=quantity)
-                product.setQuantity(product.getQuantity()- quantity);
-                CSVUtils.write(PATH, products);
-                break;
-            }
+        for (Product product : products) {
+            if (product.getId() == id)
+                if (product.getQuantity() >= quantity) {
+                    product.setQuantity(product.getQuantity() - quantity);
+                    CSVUtils.write(PATH, products);
+                    break;
+                }
         }
+    }
+
 
 
     @Override

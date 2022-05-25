@@ -40,8 +40,14 @@ public class ProductViewLancher {
                     case 7:
                         productView.sortByPriceOrderByDESC();
                         break;
-                    case 8:
+                    case 10:
                         menuOption();
+                        break;
+                    case 8:
+                        productView.findProductByTheMostPrice();
+                        break;
+                    case 9:
+                        productView.findProductByTheLowestPrice();
                         break;
                     case 0:
                         AppUtils.exit();
@@ -61,20 +67,28 @@ public class ProductViewLancher {
     }
 
 
+
     public static void menuBook() {
-        System.out.println("♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ --MENU BOOK-- ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫");
-        System.out.println("♫                                                          ♫");
-        System.out.println("♫       1.Thêm sách                                        ♫");
-        System.out.println("♫       2.Sửa thông tin sách                               ♫");
-        System.out.println("♫       3.Xoá sách                                         ♫");
-        System.out.println("♫       4.Tìm kiếm sách                                    ♫");
-        System.out.println("♫       5.Hiện thị toàn bộ sách                            ♫");
-        System.out.println("♫       6.Hiển thị sách theo giá từ thấp đến cao           ♫");
-        System.out.println("♫       7.Hiển thị sách theo giá từ cao xuống thấp         ♫");
-        System.out.println("♫       8.Trở lại Menu chính                               ♫");
-        System.out.println("♫       0.Thoát chương trình                               ♫");
-        System.out.println("♫                                                          ♫");
-        System.out.println("♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫♫");
+        System.out.println("♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ --MENU BOOK-- ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫♫ ♫");
+        System.out.println("♫                                                              ♫");
+        System.out.println("♫       1.Thêm sách                                            ♫");
+        System.out.println("♫       2.Sửa thông tin sách                                   ♫");
+        System.out.println("♫       3.Xoá sách                                             ♫");
+        System.out.println("♫       4.Tìm kiếm sách                                        ♫");
+        System.out.println("♫       5.Hiện thị toàn bộ sách                                ♫");
+        System.out.println("♫       6.Hiển thị sách theo giá từ thấp đến cao               ♫");
+        System.out.println("♫       7.Hiển thị sách theo giá từ cao xuống thấp             ♫");
+        System.out.println("♫       8.Tìm sách có giá cao nhất                             ♫");
+        System.out.println("♫       9.Tìm sách có giá thấp nhất                            ♫");
+        System.out.println("♫                                                              ♫");
+        System.out.println("♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫♫♫♫♫");
+        System.out.println("♫                                                              ♫");
+        System.out.println("♫ 10.Trở lại Menu chính                    0.Thoát chương trình ♫");
+        System.out.println("♫                                                              ♫");
+        System.out.println("♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫♫ ♫ ♫");
+
     }
+
+
 }
 

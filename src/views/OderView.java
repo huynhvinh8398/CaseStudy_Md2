@@ -73,6 +73,8 @@ public class OderView {
     public void addOrder(){
             try {
                 orderService.findAll();
+                ProductView productView = new ProductView();
+                productView.showProducts(InputOption.ADD);
                 long orderId = System.currentTimeMillis()/1000;
                 System.out.println("Nhập họ và tên (Ví dụ: Vinh Huynh)");
                 System.out.print(" ➤ ");

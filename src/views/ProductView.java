@@ -241,14 +241,16 @@ productService.add(product);
     //Tìm kiếm sản phẩm theo tên
     public void findNameProduct() {
         List<Product> products = productService.findAll();
+        ProductView productView = new ProductView();
+        productView.showProducts(InputOption.ADD);
         System.out.println();
         System.out.println("Nhập tên sách muốn tìm: ");
         String search = scanner.nextLine();
         System.out.println("╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍");
         System.out.printf("%-15s %-20s %-20s  %-20s\n",
-                "Id", "Name " , "Quantity", "Price");
+                "Id", "Tên sách " , "Số lượng", "Giá");
         for (Product product : products) {
-            if (product.toString().toLowerCase().contains(search)) {
+            if (product.getName().toLowerCase().contains(search)) {
                 System.out.printf("%-15d %-20s%-15d %-20s\n",
                         product.getId(),
                         product.getName(),
@@ -284,6 +286,54 @@ productService.add(product);
 // sắp xếp giảm dần
     public void sortByPriceOrderByDESC() {
         showProductsSort(InputOption.SHOW, productService.findAllOderBypriceDESC());
+    }
+    //tìm sách có giá cao nhất
+    public void findProductByTheMostPrice() {
+        List<Product> products = productService.findAll();
+        Product maxProduct = products.get(0);
+
+        for (int i = 1; i < products.size(); i++) {
+            if (maxProduct.getPrice() < products.get(i).getPrice()) {
+                maxProduct = products.get(i);
+            }
+        }
+        System.out.println("--------------------------------------TÊN SÁCH TÌM KIẾM----------------------------------------");
+        System.out.printf("%-15s %-20s %-15s %-15s %-25s", "Id", "Tên sách", "Giá", "Số lượng","Thể loại sách");
+        System.out.printf("\n%-15s %-20s %-15s %-15s %-25s",
+                maxProduct.getId(),
+                maxProduct.getName(),
+                AppUtils.doubleToVND(maxProduct.getPrice()),
+                maxProduct.getQuantity(),
+                maxProduct.getDescription()
+        );
+
+        System.out.println("--------------------------------------------------------------------------------------------------");
+
+
+    }
+    //tìm sách có giá thấp nhất
+    public void findProductByTheLowestPrice() {
+        List<Product> products = productService.findAll();
+        Product minProduct = products.get(0);
+
+        for (int i = 1; i < products.size(); i++) {
+            if (minProduct.getPrice() > products.get(i).getPrice()) {
+                minProduct = products.get(i);
+            }
+        }
+        System.out.println("--------------------------------------TÊN SÁCH TÌM KIẾM----------------------------------------");
+        System.out.printf("%-15s %-20s %-15s %-15s %-25s", "Id", "Tên sách", "Giá", "Số lượng","Thể loại s");
+        System.out.printf("\n%-15s %-20s %-15s %-15s %-25s",
+                minProduct.getId(),
+                minProduct.getName(),
+                AppUtils.doubleToVND(minProduct.getPrice()),
+                minProduct.getQuantity(),
+                minProduct.getDescription()
+        );
+
+        System.out.println("--------------------------------------------------------------------------------------------------");
+
+
     }
 
 }

@@ -17,11 +17,8 @@ public interface IProductService {
     Product findName(String name);
     List<Product> findProductByName(String name);
     //update
-//    void updateName (Product newProduct);
-//    void updatePrice (Product newProduct);
+
     void updateQuantity(long id, int quantity);
-
-
     List<Product> findAllOderByPriceASC();
     List<Product>findAllOderBypriceDESC();
 }

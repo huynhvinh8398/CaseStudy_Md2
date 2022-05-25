@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b8afebb-aafd-463d-8ba5-0655c0d8685a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/order_item.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../data/order_item.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/orders.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../data/orders.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/products.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../data/products.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/untitled104/services/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/untitled104/services/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/untitled104/views/OderView.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/untitled104/views/OderView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/untitled104/views/ProductView.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/untitled104/views/ProductView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/views/OderView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/views/OderView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/views/ProductView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/views/ProductView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled104.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../thithuchanhmode2.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,12 +21,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="28bTzzvsaM5DmGdmuTtpbz1N7p2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -37,6 +49,7 @@
       <workItem from="1651484554675" duration="14000" />
       <workItem from="1651593578479" duration="19000" />
       <workItem from="1653233048221" duration="419000" />
+      <workItem from="1653446733839" duration="16000" />
     </task>
     <servers />
   </component>
